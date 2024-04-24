@@ -34,5 +34,5 @@ int main(int argc, char *argv[]){
 
 	fclose(file);
 	
-	return 1;
+	return 0;
 }
