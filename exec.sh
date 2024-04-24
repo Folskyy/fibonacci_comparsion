@@ -10,6 +10,7 @@ else
 	> "$out_file"
 fi
 
+
 # compile
 if gcc recursive_fib.c -o output/recursive_fib.out; then
 	echo "recursive_fib.c has been compiled."
@@ -18,6 +19,7 @@ else
 	exit 1
 fi
 
+
 if gcc iterative_fib.c -o output/iterative_fib.out; then
 	echo "iterative_fib.c has been compiled."
 else
@@ -25,22 +27,30 @@ else
 	exit 1
 fi
 
+echo ">Type the Fibonacci's number you want to calculate:"
+read n
 
 echo "Iterative fibonacci: " >> "$out_file"
-./output/recursive_fib.out 60
+echo "itertive_fib running..."
+
+if ./output/iterative_fib.out "$n"; then
+	echo "Succefully executed."
+else
+	echo "Unable to execute."
+	exit 1
+fi
+
 
 echo "Recursive fibonacci: " >> "$out_file"
-./output/recursive_fib.out 60
+echo "recursive_fib running..."
 
-# if ./output/recursive_fib.out; then
-# 	echo "recursive_fib.out has been executed."
-# else
-# 	echo "Cannot run recursive_fib.out."
-#	exit 1
+if ./output/recursive_fib.out "$n"; then
+	echo "Succefully executed."
+else
+	echo "Unable to execute."
+	exit 1
+fi
 
-#if ./output/iterative_fib.out; then
-#	echo "iterative_fib.out has been executed."
-#else
-#	echo "Cannot run iterative_fib.out."
-#	exit 1
+	echo -e "\n\n----------RESULTS----------"
+cat output/results.csv
 
