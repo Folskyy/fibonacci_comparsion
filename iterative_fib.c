@@ -40,7 +40,7 @@ int main(int argc, char *argv[]){
 
 	clock_t end_t = clock();
 
-	double time_taken = ((double)(end_t - start_t)) / CLOCKS_PER_SEC;
+	double time_taken = ((long double)(end_t - start_t)) / CLOCKS_PER_SEC;
 
 	FILE *file;
 	file = fopen("output/results.csv", "a");
