@@ -10,8 +10,16 @@ int fibonacci(int n){
 
 	return (fibonacci(n - 1) + fibonacci(n - 2));
 }
-
+/// @brief Run fibonacci's algorithm and count the execution time
+/// @param argc 
+/// @param argv 
+/// @return algorithm's name, run time and param used
 int main(int argc, char *argv[]){
+	if(argc <= 1){
+		printf("Invalid param\n");
+		return 0;
+	}
+	
 	int n = atoi(argv[1]);
 
 	clock_t start_t = clock();
