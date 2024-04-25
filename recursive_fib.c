@@ -30,7 +30,7 @@ int main(int argc, char *argv[]){
 		return 0;
 	}
 
-	fprintf(file, "%lf\n", time_taken);
+	fprintf(file, "recursive,%d,%lf\n", n, time_taken);
 
 	fclose(file);
 	
