@@ -31,7 +31,7 @@ int main(int argc, char *argv[]){
 
 	clock_t end_t = clock();
 
-	double time_taken = ((long double)(end_t - start_t)) / CLOCKS_PER_SEC;
+	long double time_taken = ((long double)(end_t - start_t)) / CLOCKS_PER_SEC;
 
 	FILE *file;
 	file = fopen("output/results.csv", "a");
@@ -41,7 +41,7 @@ int main(int argc, char *argv[]){
 		return 0;
 	}
 
-	fprintf(file, "recursive,%d,%lf\n", n, time_taken);
+	fprintf(file, "recursive,%d,%Lf\n", n, time_taken);
 
 	fclose(file);
 	
