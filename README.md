@@ -1,5 +1,5 @@
 # To-do
-  -Plot an graphic, *Time* in funcion of *number*
+  -Plot an graphic, *Time* in funcion of *number*\n
   -Maybe monitor some other system resorces (memory and CPU)
 **done**
 \_(done)\_-Format output to add collumns on the csv files
